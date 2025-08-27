@@ -1,0 +1,13 @@
+/* Global */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background: #eee;
+}
+
+/* Body content spacing */
+main {
+  padding-top: 120px;   /* header height + some spacing */
+  padding-bottom: 120px; /* footer height + spacing */
+}
