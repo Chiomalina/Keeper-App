@@ -20,8 +20,12 @@ function CreateArea(props) {
     })
   }
 
-  function SubmitNote(event){
+  function submitNote(event){
     props.onAdd(note)
+    setNote({
+    title: "",
+    content: ""
+  })
     event.preventDefault()
   }
 
@@ -46,7 +50,7 @@ function CreateArea(props) {
         >
         
         </textarea>
-        <button onClick={SubmitNote}>Add</button>
+        <button onClick={submitNote}>Add</button>
       </form>
     </div>
   )
