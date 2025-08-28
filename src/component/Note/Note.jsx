@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { RiDeleteBin4Fill } from "react-icons/ri";
 import "./Note.css"
 
 function Note(props) {
@@ -12,7 +13,7 @@ function Note(props) {
     <div className='note'>
         <h1>{props.Num}. {props.title}</h1>
         <p>{props.content}</p>
-        <button onClick={handleClick}>DELETE</button>
+        <button onClick={handleClick}><RiDeleteBin4Fill size={30}/></button>
     </div>
   )
 }

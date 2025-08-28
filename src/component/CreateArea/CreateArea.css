@@ -1,47 +1,56 @@
-form{
-    margin-top: 150px;
-    display: flex;
-    flex-direction: column;
-    padding-block: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 200px;
-    width: 50vw;
-    border-radius: 7px;
-    margin-left: 90px;
-    margin-left: 40px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-    background-color: #fff;
+form {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block: 20px;
+  height: 200px;
+  width: 50vw;
+  border-radius: 7px;
+  margin-left: 35px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  position: relative;   /* ✅ needed for absolute children */
 }
 
-form input{
-    border: none;
-    padding: 5px, 5px, 5px, 5px;
-    margin-left: 5px;
-    margin-bottom: 10px;
-    font-size: 20px;
+form input {
+  border: none;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  width: 90%;
 }
 
-form textarea{
-    border: none;
-    font-size: 20px;
-    height: 50vh;
+form textarea {
+  border: none;
+  font-size: 20px;
+  height: 80vh;
+  width: 90%;
+  resize: none;
 }
 
-form button{
-    position: relative;
-    right: -250px;
-    bottom: -40px;
-    background: #f5ba13;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    height: 110px;
-    width: 60px;
-    font-size: 18px;
-    cursor: pointer;
-    outline: none;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    
+form button {
+  position: absolute;
+  bottom: 20px;        /* ✅ anchor 20px from bottom */
+  right: 20px;         /* ✅ anchor 20px from right */
+  background: #f5ba13;
+  color: #fff;
+  border: none;
+  border-radius: 50%;  /* ✅ round shape */
+  height: 50px;
+  width: 50px;
+  font-size: 22px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  display: flex;       /* ✅ center icon inside */
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
 
+form button:hover {
+  background: green;
+  transform: scale(1.1); 
 }

@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import { IoAddOutline } from "react-icons/io5";
+import { Fab } from "@mui/material";
+import { Zoom } from "@mui/material"; 
 import "./CreateArea.css"
 
 function CreateArea(props) {
@@ -50,7 +53,7 @@ function CreateArea(props) {
         >
         
         </textarea>
-        <button onClick={submitNote}>Add</button>
+        <button onClick={submitNote}><IoAddOutline size={24}/></button>
       </form>
     </div>
   )
